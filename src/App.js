@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header/Header";
+import Home from "./components/Home/Home";
+import "./App.css";
+import Cars from "./components/Cars/Cars";
+import Contact from "./components/Contact/Contact";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function App() {
+  const [nav, setNav] = useState("Header");
+
+  useEffect(() => {
+    if (nav.length > 0) {
+      const element = document.getElementById(`${nav}`);
+
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setNav("");
+  }, [nav]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="body">
+      <div className="bodycontent ">
+        <div id="Header" className="sticky">
+          <Header setnav={setNav} />
+        </div>
+        <div id="Home">
+          <Home />
+        </div>
+      </div>
+      <div id="Cars">
+        <Cars />
+      </div>
+      <div id="Contact">
+        <Contact />
+      </div>
     </div>
   );
 }

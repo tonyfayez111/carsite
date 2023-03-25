@@ -1,0 +1,16 @@
+.contact{
+ 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size:1.5rem;
+    height: 100vh;
+    flex-wrap: wrap;
+    
+    
+    
+}
+a{
+    color: white;
+    text-decoration:none
+}
