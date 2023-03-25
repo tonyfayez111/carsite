@@ -1,10 +1,10 @@
-.cars{
-    
+.cars {
+
     padding: 10%;
-    display:flex ;
-justify-content: center;
-align-items: flex-start;
-flex-wrap: wrap;
-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 100vh;
 
 }
